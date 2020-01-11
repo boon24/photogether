@@ -1,13 +1,3 @@
-
-/*
-function renderBackground() {
-    firebase.storage().ref().child('images/camera-back.jpg').getDownloadURL().then(function(url) {
-        var test = url;
-    });
-    document.querySelector('bg').src = test;
-}
-*/
-
 // Signs-in photogether.
 function signIn() {
     // Sign into Firebase using popup auth & Google as the identity provider.
@@ -86,4 +76,3 @@ signInButtonElement.addEventListener('click', signIn);
 
 // initialize Firebase
 initFirebaseAuth();
-//renderBackground();
