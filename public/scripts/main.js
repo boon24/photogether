@@ -24,6 +24,7 @@ function isUserSignedIn() {
 
 // Triggers when the auth state change for instance when the user signs-in or signs-out.
 function authStateObserver(user) {
+    console.log(user);
     if (user) { // User is signed in!
       // Get the signed-in user's profile pic and name.
       //var profilePicUrl = getProfilePicUrl();
@@ -54,21 +55,9 @@ function authStateObserver(user) {
       // Show sign-in button.
       //signInButtonElement.removeAttribute('hidden');
       console.log("Signed out");
-      window.location.href = "index.html";
-    }
-  }
 
-// Checks that the Firebase SDK has been correctly setup and configured.
-function checkSetup() {
-    if (!window.firebase || !(firebase.app instanceof Function) || !firebase.app().options) {
-      window.alert('You have not configured and imported the Firebase SDK. ' +
-          'Make sure you go through the codelab setup instructions and make ' +
-          'sure you are running the codelab using `firebase serve`');
-    }
   }
-
-// Checks that Firebase has been imported.
-//checkSetup();
+}
 
 var signInButtonElement = document.getElementById('sign-in');
 var signOutButtonElement = document.getElementById('sign-out');
