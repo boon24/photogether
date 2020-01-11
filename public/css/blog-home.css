@@ -6,3 +6,11 @@
 body {
   padding-top: 56px;
 }
+
+body{
+  font-family: 'Nunito', sans-serif;
+}
+
+header {
+  font-family: 'Nunito', sans-serif;
+}

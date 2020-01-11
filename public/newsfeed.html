@@ -4,35 +4,49 @@
       <title>Create Event - photogether</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
       <link rel="stylesheet" href="styles\newsfeed.css">
-      <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+      <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
       
   </head>
   <body>
       <nav class = "navbar navbar-dark bg-secondary">
-        <a href = "scripts\foryou.js" class = "navbar-brand">Home</a>
+        <a href = "foryou.html" class = "navbar-brand">For You</a>
       
       </nav>
       <!-- NAME FORM-->
       <div class = "container mt-3 p-10">
         <h4 class = "text-center">Create Event</h4>
+
         <div class = "form-group">
           <label for ="Name">Location</label>
-          <input type = "text" name = 'Location' id = 'userLocation' class = 'form-control'/>
-
-
+          <input type = "text" name = 'Location' id = 'userLocation' class = 'form-control'required/>
         </div>
         <!-- DATE Form-->
           <div class = "form-group">
             <label for ="Date">Date</label>
-            <input type = "text" name = 'Date' id = 'userDate' class = 'form-control'/>
+            <input type = "text" name = 'Date' id = 'userDate' class = 'form-control' required/>
           </div>
   
         <!-- TIME Form-->
           <div class = "form-group">
             <label for ="Time">Time</label>
-            <input type = "text" name = 'Time' id = 'userTime' class = 'form-control'/>          
+            <input type = "text" name = 'Time' id = 'userTime' class = 'form-control' required/>          
           </div>
+
+        <!-- TIME Form-->
+        <div class = "form-group">
+          <label for ="Description">Description</label>
+          <input type = "text" name = 'Description' id = 'userDescription' class = 'form-control' required/>          
         </div>
+
+        <!-- TIME Form-->
+        <div class = "form-group">
+          <label for ="Image URL">Image URL</label>
+          <input type = "text" name = 'Image URL' id = 'userURL' class = 'form-control' required/>          
+        </div>
+
+      </div>
+
+        <!-- SUBMIT Button-->
         <div class = "text-center">
           <button id = "submit" class = "btn btn-primary">Submit</button>
         </div>

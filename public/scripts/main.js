@@ -13,7 +13,6 @@ function signOut() {
 // Initiate firebase auth.
 function initFirebaseAuth() {
     // Listen to auth state changes.
-    console.log("AHHHHHHH");
     firebase.auth().onAuthStateChanged(authStateObserver);
   }
 
@@ -45,7 +44,7 @@ function authStateObserver(user) {
       // We save the Firebase Messaging Device token and enable notifications.
       //saveMessagingDeviceToken();
       console.log("Signed in");
-      window.location.href = "newsfeed.html";
+      window.location.href = "foryou.html";
     } else { // User is signed out!
       // Hide user's profile and sign-out button.
       //userNameElement.setAttribute('hidden', 'true');
