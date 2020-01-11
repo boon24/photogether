@@ -21,7 +21,9 @@ var firebaseConfig = {
   let userTime = document.querySelector('#userTime');
   
   const db = firestore.collection("contactData");
-  
+
+
+
   sumbitBtn.addEventListener('click', function(){
     let userLocationInput = userLocation.value;
     let userDateInput = userDate.value;
@@ -37,3 +39,4 @@ var firebaseConfig = {
       console.log(error);
     })
   })
+  }

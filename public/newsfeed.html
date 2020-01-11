@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <title>Contact Form - Firebase</title>
+      <title>Create Event - photogether</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
+      <link rel="stylesheet" href="styles\newsfeed.css">
+      <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+      
   </head>
   <body>
-      <nav class = "navbar navbar-dark bg-primary">
-        <a href = "#" class = "navbar-brand">Contact Form</ahref = "#" class = "navbar-brand">
+      <nav class = "navbar navbar-dark bg-secondary">
+        <a href = "scripts\foryou.js" class = "navbar-brand">Home</a>
+        <button id="sign-in" class="btn btn-primary hidden=true">Sign In</button>
+        <button id="sign-out" class="btn btn-danger">Sign Out</button>
+      
       </nav>
       <!-- NAME FORM-->
-      <div class = "container mt-3 card card-body p-4">
-        <h4 class = "text-center"> Contact Form</h4>
+      <div class = "container mt-3 p-10">
+        <h4 class = "text-center">Create Event</h4>
         <div class = "form-group">
           <label for ="Name">Location</label>
           <input type = "text" name = 'Location' id = 'userLocation' class = 'form-control'/>
+
+
         </div>
         <!-- DATE Form-->
           <div class = "form-group">
             <label for ="Date">Date</label>
             <input type = "text" name = 'Date' id = 'userDate' class = 'form-control'/>
           </div>
-         </div>
-         <!-- TIME Form-->
+  
+        <!-- TIME Form-->
           <div class = "form-group">
             <label for ="Time">Time</label>
             <input type = "text" name = 'Time' id = 'userTime' class = 'form-control'/>          
           </div>
+        </div>
+        <div class = "text-center">
           <button id = "submit" class = "btn btn-primary">Submit</button>
+        </div>
+
       </div>
         <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
         <script src= "https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
