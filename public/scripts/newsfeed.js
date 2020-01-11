@@ -38,5 +38,6 @@ var firebaseConfig = {
     }).catch(function(error){
       console.log(error);
     })
-  })
-  }
+  });
+
+  
