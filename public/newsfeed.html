@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Contact Form - Firebase</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  </head>
+  <body>
+      <nav class = "navbar navbar-dark bg-primary">
+        <a href = "#" class = "navbar-brand">Contact Form</ahref = "#" class = "navbar-brand">
+      </nav>
+      <!-- NAME FORM-->
+      <div class = "container mt-3 card card-body p-4">
+        <h4 class = "text-center"> Contact Form</h4>
+        <div class = "form-group">
+          <label for ="Name">Location</label>
+          <input type = "text" name = 'Location' id = 'userLocation' class = 'form-control'/>
+        </div>
+        <!-- DATE Form-->
+          <div class = "form-group">
+            <label for ="Date">Date</label>
+            <input type = "text" name = 'Date' id = 'userDate' class = 'form-control'/>
+          </div>
+         </div>
+         <!-- TIME Form-->
+          <div class = "form-group">
+            <label for ="Time">Time</label>
+            <input type = "text" name = 'Time' id = 'userTime' class = 'form-control'/>          
+          </div>
+          <button id = "submit" class = "btn btn-primary">Submit</button>
+      </div>
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+        <script src= "https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+        <script src = "scripts\newsfeed.js"></script>
+  </body>
+</html>
