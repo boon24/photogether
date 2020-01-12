@@ -11,6 +11,8 @@ var firebaseConfig = {
 
 // init firebase
 
+
+
 firebase.initializeApp(firebaseConfig);
 let firestore = firebase.firestore();
 
@@ -100,73 +102,6 @@ function loadMessages() {
     });
 }
   
-/*
-function createAndInsertMessage(id, timestamp) {
-    const container = document.createElement('div');
-    container.innerHTML = MESSAGE_TEMPLATE;
-    const div = container.firstChild;
-    div.setAttribute('id', id);
-  
-    // If timestamp is null, assume we've gotten a brand new message.
-    // https://stackoverflow.com/a/47781432/4816918
-    timestamp = timestamp ? timestamp.toMillis() : Date.now();
-    div.setAttribute('timestamp', timestamp);
-  
-    // figure out where to insert new message
-    const existingMessages = messageListElement.children;
-    if (existingMessages.length === 0) {
-      messageListElement.appendChild(div);
-    } else {
-      let messageListNode = existingMessages[0];
-  
-      while (messageListNode) {
-        const messageListNodeTime = messageListNode.getAttribute('timestamp');
-  
-        if (!messageListNodeTime) {
-          throw new Error(
-            `Child ${messageListNode.id} has no 'timestamp' attribute`
-          );
-        }
-  
-        if (messageListNodeTime > timestamp) {
-          break;
-        }
-  
-        messageListNode = messageListNode.nextSibling;
-      }
-  
-      messageListElement.insertBefore(div, messageListNode);
-    }
-  
-    return div;
-  }*/
-
-  // Displays a Message in the UI.
-/*function displayMessage(id, location, date, time, description, url, timestamp) {
-    var div = document.getElementById(id) || createAndInsertMessage(id, timestamp);
-  
-    // profile picture
-    //if (picUrl) {
-    //  div.querySelector('.pic').style.backgroundImage = 'url(' + addSizeToGoogleProfilePic(picUrl) + ')';
-    //}
-  
-    div.querySelector('.name').textContent = name;
-    var messageElement = div.querySelector('.message');
-  
-    var image = document.createElement('img');
-    image.addEventListener('load', function() {
-        messageListElement.scrollTop = messageListElement.scrollHeight;
-        });
-        image.src = imageUrl + '&' + new Date().getTime();
-      messageElement.innerHTML = '';
-      messageElement.appendChild(image);
-    
-    // Show the card fading-in and scroll to view the new message.
-    setTimeout(function() {div.classList.add('visible')}, 1);
-    messageListElement.scrollTop = messageListElement.scrollHeight;
-    messageInputElement.focus();
-  }
-*/
 // Delete a Message from the UI.
 function deleteMessage(id) {
     var div = document.getElementById(id);
@@ -179,6 +114,55 @@ function deleteMessage(id) {
 var eventListElement = document.getElementById('eventData');
 var messageFormElement = document.getElementById('event-form');
 var messageInputElement = document.getElementById('event');
+
+var attendButtonElement1 = document.getElementById('attend1');
+var attendButtonElement2 = document.getElementById('attend2');
+var attendButtonElement3 = document.getElementById('attend3');
+var attendButtonElement4 = document.getElementById('attend4');
+
+attendButtonElement1.addEventListener('click', function(){
+    if (attendButtonElement1.innerHTML != "Unattend") {
+        attendButtonElement1.innerHTML="Unattend";
+        attendButtonElement1.style.backgroundColor  = "#ff0000";
+    }
+    else {
+        attendButtonElement1.innerHTML="Attend";
+        attendButtonElement1.style.backgroundColor  = "green";
+    }
+    });
+
+    attendButtonElement2.addEventListener('click', function(){
+    if (attendButtonElement2.innerHTML != "Unattend") {
+        attendButtonElement2.innerHTML="Unattend";
+        attendButtonElement2.style.backgroundColor  = "#ff0000";
+    }
+    else {
+        attendButtonElement2.innerHTML="Attend";
+        attendButtonElement2.style.backgroundColor  = "green";
+    }
+    });
+
+    attendButtonElement3.addEventListener('click', function(){
+    if (attendButtonElement3.innerHTML != "Unattend") {
+        attendButtonElement3.innerHTML="Unattend";
+        attendButtonElement3.style.backgroundColor  = "#ff0000";
+    }
+    else {
+        attendButtonElement3.innerHTML="Attend";
+        attendButtonElement3.style.backgroundColor  = "green";
+    }
+    });
+
+    attendButtonElement4.addEventListener('click', function(){
+    if (attendButtonElement4.innerHTML != "Unattend") {
+        attendButtonElement4.innerHTML="Unattend";
+        attendButtonElement4.style.backgroundColor  = "#ff0000";
+    } 
+    else {
+        attendButtonElement4.innerHTML="Attend";
+        attendButtonElement4.style.backgroundColor = "green";
+    }
+    });
 
 loadMessages();
 

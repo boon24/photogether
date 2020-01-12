@@ -11,11 +11,7 @@ var firebaseConfig = {
 
 // init firebase
 firebase.initializeApp(firebaseConfig);
-
 let firestore = firebase.firestore();
-
-
-//var loginStuff = defaultProject.default.auth();
 
 const sumbitBtn = document.querySelector('#submit');
 
@@ -35,7 +31,7 @@ sumbitBtn.addEventListener('click', function(){
   let userDescriptionInput = userDescription.value;
   let userURLInput = userURL.value;
   let userNameInput = userName.value;
-  console.log(userDate);
+
   db.doc().set({
     location: userLocationInput,
     date: userDateInput.value,
