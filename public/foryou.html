@@ -6,7 +6,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
-  <meta name="matthew" content="">
+
+  <!-- update the version number as needed
+  <script src="/__/firebase/7.6.2/firebase-app.js"></script>
+  include only the Firebase features as you need
+  <script src="/__/firebase/7.6.2/firebase-auth.js"></script>
+  <script src="/__/firebase/7.6.2/firebase-database.js"></script>
+  <script src="/__/firebase/7.6.2/firebase-messaging.js"></script>
+  <script src="/__/firebase/7.6.2/firebase-storage.js"></script>
+   initialize the SDK after all desired features are loaded
+  <script src="/__/firebase/init.js"></script> -->
 
   <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 
@@ -64,17 +73,17 @@
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <div class="card-footer text-muted">
+          <div class="username card-footer text-muted">
             <a href="#">username</a>
           </div>
-          <img class="card-img-top" src="https://content.thriveglobal.com/wp-content/uploads/2018/03/ales-krivec-434-750x300.jpg?w=1550" alt="Card image cap">
+          <img id="pic1" class="image card-img-top" src="https://content.thriveglobal.com/wp-content/uploads/2018/03/ales-krivec-434-750x300.jpg?w=1550" alt="Unknown Image">
           <div class="card-body">
-            <h2 class="card-title">Location</h2>
-            <p class="card-text">Time and date. Description.</p>
+            <h2 id="location1" class="location card-title">Location</h2>
+            <p id="dtd1" class="card-text">Time and date. Description.</p>
             <a href="#" class="btn btn-primary btn-sm">Like</a>
             <a href="#" class="btn btn-success btn-sm">Attend</a>
           </div>
-          <div class="card-footer text-muted">
+          <div id="timestamp1" class="card-footer text-muted">
             January 1, 2017
           </div>
         </div>
@@ -84,14 +93,14 @@
           <div class="card-footer text-muted">
             <a href="#">username</a>
           </div>
-          <img class="card-img-top" src="https://content.thriveglobal.com/wp-content/uploads/2018/03/ales-krivec-434-750x300.jpg?w=1550" alt="Card image cap">
+          <img id="pic2" class="card-img-top" src="https://content.thriveglobal.com/wp-content/uploads/2018/03/ales-krivec-434-750x300.jpg?w=1550" alt="Unknown Image">
           <div class="card-body">
-            <h2 class="card-title">Location</h2>
-            <p class="card-text">Time and date. Description.</p>
+            <h2 id="location2" class="card-title">Location</h2>
+            <p id="dtd2" class="card-text">Time and date. Description.</p>
             <a href="#" class="btn btn-primary btn-sm">Like</a>
             <a href="#" class="btn btn-success btn-sm">Attend</a>
           </div>
-          <div class="card-footer text-muted">
+          <div id="timestamp2" class="card-footer text-muted">
             January 1, 2017
           </div>
         </div>
@@ -101,14 +110,14 @@
           <div class="card-footer text-muted">
             <a href="#">username</a>
           </div>
-          <img class="card-img-top" src="https://content.thriveglobal.com/wp-content/uploads/2018/03/ales-krivec-434-750x300.jpg?w=1550" alt="Card image cap">
+          <img id="pic3" class="card-img-top" src="https://content.thriveglobal.com/wp-content/uploads/2018/03/ales-krivec-434-750x300.jpg?w=1550" alt="Unknown Image">
           <div class="card-body">
-            <h2 class="card-title">Location</h2>
-            <p class="card-text">Time and date. Description.</p>
+            <h2 id="location3" class="card-title">Location</h2>
+            <p id="dtd3" class="card-text">Time and date. Description.</p>
             <a href="#" class="btn btn-primary btn-sm">Like</a>
             <a href="#" class="btn btn-success btn-sm">Attend</a>
           </div>
-          <div class="card-footer text-muted">
+          <div id="timestamp3" class="card-footer text-muted">
             January 1, 2017
           </div>
         </div>
@@ -118,14 +127,14 @@
           <div class="card-footer text-muted">
             <a href="#">username</a>
           </div>
-          <img class="card-img-top" src="https://vignette.wikia.nocookie.net/shokugekinosoma/images/a/a9/S%C5%8Dma_Yukihira_%28anime%29.png/revision/latest?cb=20160903122538" alt="Card image cap">
+          <img id="pic4" class="card-img-top" src="https://content.thriveglobal.com/wp-content/uploads/2018/03/ales-krivec-434-750x300.jpg?w=1550" alt="Unknown Image">
           <div class="card-body">
-            <h2 class="card-title">Location</h2>
-            <p class="card-text">Time and date. Description.</p>
+            <h2 id="location4" class="card-title">Location</h2>
+            <p id="dtd4" class="card-text">Time and date. Description.</p>
             <a href="#" class="btn btn-primary btn-sm">Like</a>
             <a href="#" class="btn btn-success btn-sm">Attend</a>
           </div>
-          <div class="card-footer text-muted">
+          <div id="timestamp4" class="card-footer text-muted">
             January 1, 2017
           </div>
         </div>
@@ -220,5 +229,8 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+  <script src="/scripts/foryou.js"></script>
 
 </body>

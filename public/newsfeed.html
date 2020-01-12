@@ -20,28 +20,27 @@
           <label for ="Name">Location</label>
           <input type = "text" name = 'Location' id = 'userLocation' class = 'form-control'required/>
         </div>
-        <!-- DATE Form-->
-          <div class = "form-group">
-            <label for ="Date">Date</label>
-            <input type = "text" name = 'Date' id = 'userDate' class = 'form-control' required/>
-          </div>
-  
-        <!-- TIME Form-->
-          <div class = "form-group">
-            <label for ="Time">Time</label>
-            <input type = "text" name = 'Time' id = 'userTime' class = 'form-control' required/>          
-          </div>
 
-        <!-- TIME Form-->
+        <!-- DESCRIPTION Form-->
         <div class = "form-group">
           <label for ="Description">Description</label>
           <input type = "text" name = 'Description' id = 'userDescription' class = 'form-control' required/>          
         </div>
 
-        <!-- TIME Form-->
+        <!-- URL Form-->
         <div class = "form-group">
           <label for ="Image URL">Image URL</label>
           <input type = "text" name = 'Image URL' id = 'userURL' class = 'form-control' required/>          
+        </div>
+
+        <!-- DATE Form-->
+        <div class = "form-group">
+          <label for ="Date">Date</label>
+          <input type="date" id="userDate" name="trip-start" value="2020-01-11" min="2020-01-01" max="2022-12-31">
+    
+      <!-- TIME Form-->
+          <label for ="Time">Time</label>
+          <input type="time" id="userTime" name="appt" min="09:00" max="18:00" required>         
         </div>
 
       </div>
@@ -53,8 +52,16 @@
 
         <!-- Submitted Pop-Up -->
         <div id="snackbar" hidden=true>Event created!</div>
-
       </div>
+
+      <script> 
+        function activatePlacesSearch(){
+          var input = document.getElementById('userLocation');
+          var autocomplete = new google.maps.places.Autocomplete(input);
+        }
+      </script>
+
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZPXuNfGsGrzKsY8500EWDp0r4vzd4DZs&libraries=places&callback=activatePlacesSearch"></script>
         <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
         <script src= "https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
         <script src = "scripts\newsfeed.js"></script>

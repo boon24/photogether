@@ -14,3 +14,7 @@ body{
 header {
   font-family: 'Nunito', sans-serif;
 }
+
+.col-md-4 {
+  margin-top: 6.2%;
+}
