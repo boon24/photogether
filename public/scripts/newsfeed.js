@@ -10,10 +10,12 @@ var firebaseConfig = {
 };
 
 // init firebase
-
 firebase.initializeApp(firebaseConfig);
+
 let firestore = firebase.firestore();
-//let loginStuff = firebase.auth();
+
+
+//var loginStuff = defaultProject.default.auth();
 
 const sumbitBtn = document.querySelector('#submit');
 
@@ -22,6 +24,7 @@ let userDate = document.querySelector('#userDate');
 let userTime = document.querySelector('#userTime');
 let userDescription = document.querySelector('#userDescription');
 let userURL = document.querySelector('#userURL');
+let userName = document.querySelector('#userName');
 
 const db = firestore.collection("eventData");
 
@@ -31,14 +34,18 @@ sumbitBtn.addEventListener('click', function(){
   let userTimeInput = userTime.value;
   let userDescriptionInput = userDescription.value;
   let userURLInput = userURL.value;
+  let userNameInput = userName.value;
   console.log(userDate);
   db.doc().set({
     location: userLocationInput,
     date: userDateInput.value,
+    date: userDateInput.value,
+    date: userDateInput.value,
     time: userTimeInput,
     description : userDescriptionInput,
     url : userURLInput,
-    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    username: userNameInput
   }).then(function(){ 
     console.log("data saved");
     alert("Event created!");

@@ -5,10 +5,10 @@ function signIn() {
     firebase.auth().signInWithPopup(provider);
 }
 // Signs-out of photogether.
-function signOut() {
+//function signOut() {
     // Sign out of Firebase.
-    firebase.auth().signOut();
-  }
+    //firebase.auth().signOut();
+  //}
 
 // Initiate firebase auth.
 function initFirebaseAuth() {
@@ -18,7 +18,7 @@ function initFirebaseAuth() {
 
 // Returns true if a user is signed-in.
 function isUserSignedIn() {
-    return !!firebase.auth().currentUser;
+    return firebase.auth().currentUser;
 }
 
 // Triggers when the auth state change for instance when the user signs-in or signs-out.
@@ -59,10 +59,10 @@ function authStateObserver(user) {
 }
 
 var signInButtonElement = document.getElementById('sign-in');
-var signOutButtonElement = document.getElementById('sign-out');
+//var signOutButtonElement = document.getElementById('sign-out');
 
 signInButtonElement.addEventListener('click', signIn);
-signOutButtonElement.addEventListener('click', signOut);
+//signOutButtonElement.addEventListener('click', signOut);
 
 
 // initialize Firebase

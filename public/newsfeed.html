@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,27 +15,28 @@
       </nav>
       <!-- NAME FORM-->
       <div class = "container mt-3 p-10">
-        <h4 class = "text-center">Create Event</h4>
+        <h4 class = "text-center" id = "topText">Create Event</h4>
 
         <div class = "form-group">
-          <label for ="Name">Location</label>
-          <input type = "text" name = 'Location' id = 'userLocation' class = 'form-control'required/>
+          <input type = "text" name = 'Name' id = 'userName' class = 'form-control' placeholder = "Username..." required/>
+        </div>
+
+        <div class = "form-group">
+          <input type = "text" name = 'Location' id = 'userLocation' class = 'form-control' placeholder = "Location..." required/>
         </div>
 
         <!-- DESCRIPTION Form-->
         <div class = "form-group">
-          <label for ="Description">Description</label>
-          <input type = "text" name = 'Description' id = 'userDescription' class = 'form-control' required/>          
+          <input type = "text" name = 'Description' id = 'userDescription' class = 'form-control' placeholder = "Description..." required/>          
         </div>
 
         <!-- URL Form-->
         <div class = "form-group">
-          <label for ="Image URL">Image URL</label>
-          <input type = "text" name = 'Image URL' id = 'userURL' class = 'form-control' required/>          
+          <input type = "text" name = 'Image URL' id = 'userURL' class = 'form-control' placeholder = "Image URL..." required/>          
         </div>
 
         <!-- DATE Form-->
-        <div class = "form-group">
+        <div class = "text-center">
           <label for ="Date">Date</label>
           <input type="date" id="userDate" name="trip-start" value="2020-01-11" min="2020-01-01" max="2022-12-31">
     
@@ -43,15 +45,13 @@
           <input type="time" id="userTime" name="appt" min="09:00" max="18:00" required>         
         </div>
 
-      </div>
 
         <!-- SUBMIT Button-->
         <div class = "text-center">
-          <button id = "submit" class = "btn btn-primary">Submit</button>
+          <button id = "submit" class = "btn btn-primary btn-lg btn-block">Submit</button>
         </div>
 
-        <!-- Submitted Pop-Up -->
-        <div id="snackbar" hidden=true>Event created!</div>
+
       </div>
 
       <script> 

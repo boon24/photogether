@@ -29,8 +29,10 @@ function loadMessages() {
     var index = 0;
     var picArray = ["","","",""];
     var locations = ["","","",""];
-    var dateTimeDescr = ["","","",""];
+    var timeDate = ["","","",""];
     var timeStamps = ["","","",""];
+    var descriptions = ["","","",""];
+    var usernames = ["","","",""];
 
     query.onSnapshot(function(snapshot) {
       snapshot.docChanges().forEach(function(change) {
@@ -42,7 +44,9 @@ function loadMessages() {
           picArray[index] = event.url;
           locations[index] = event.location;
           timeStamps[index] = event.timestamp;
-          dateTimeDescr[index] = event.date + " " + event.time + " " + event.description;
+          timeDate[index] = event.date + " " + event.time;
+          descriptions[index] = event.description;
+          usernames[index] = event.username;
 
           index += 1;
           //displayMessage(change.doc.id, event.location, event.date,
@@ -60,15 +64,39 @@ function loadMessages() {
       document.getElementById("location3").innerHTML=`${locations[2]}`;
       document.getElementById("location4").innerHTML=`${locations[3]}`;
       
-      document.getElementById("timestamp1").innerHTML=`${timeStamps[0]}`;
-      document.getElementById("timestamp2").innerHTML=`${timeStamps[1]}`;
-      document.getElementById("timestamp3").innerHTML=`${timeStamps[2]}`;
-      document.getElementById("timestamp4").innerHTML=`${timeStamps[3]}`;
+      var utcSec1 = timeStamps[0].seconds;
+      var d1 = new Date(0);
+      d1.setUTCSeconds(utcSec1);
+      var utcSec2 = timeStamps[1].seconds;
+      var d2 = new Date(0);
+      d2.setUTCSeconds(utcSec1);
+      var utcSec1 = timeStamps[2].seconds;
+      var d3 = new Date(0);
+      d3.setUTCSeconds(utcSec1);
+      var utcSec1 = timeStamps[3].seconds;
+      var d4 = new Date(0);
+      d4.setUTCSeconds(utcSec1);
 
-      document.getElementById("dtd1").innerHTML=`${dateTimeDescr[0]}`;
-      document.getElementById("dtd2").innerHTML=`${dateTimeDescr[1]}`;
-      document.getElementById("dtd3").innerHTML=`${dateTimeDescr[2]}`;
-      document.getElementById("dtd4").innerHTML=`${dateTimeDescr[3]}`;
+      document.getElementById("timestamp1").innerHTML=`${d1}`;
+      document.getElementById("timestamp2").innerHTML=`${d2}`;
+      document.getElementById("timestamp3").innerHTML=`${d3}`;
+      document.getElementById("timestamp4").innerHTML=`${d4}`;
+
+      document.getElementById("td1").innerHTML=`${timeDate[0]}`;
+      document.getElementById("td2").innerHTML=`${timeDate[1]}`;
+      document.getElementById("td3").innerHTML=`${timeDate[2]}`;
+      document.getElementById("td4").innerHTML=`${timeDate[3]}`;
+
+      document.getElementById("desc1").innerHTML=`${descriptions[0]}`;
+      document.getElementById("desc2").innerHTML=`${descriptions[1]}`;
+      document.getElementById("desc3").innerHTML=`${descriptions[2]}`;
+      document.getElementById("desc4").innerHTML=`${descriptions[3]}`;
+
+      document.getElementById("user1").innerHTML=`${usernames[0]}`;
+      document.getElementById("user2").innerHTML=`${usernames[1]}`;
+      document.getElementById("user3").innerHTML=`${usernames[2]}`;
+      document.getElementById("user4").innerHTML=`${usernames[3]}`;
+      
     });
 }
   
